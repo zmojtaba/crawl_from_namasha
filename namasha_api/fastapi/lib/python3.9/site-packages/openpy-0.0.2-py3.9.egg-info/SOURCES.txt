@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+openpy/__init__.py
+openpy/filesystem.py
+openpy.egg-info/PKG-INFO
+openpy.egg-info/SOURCES.txt
+openpy.egg-info/dependency_links.txt
+openpy.egg-info/requires.txt
+openpy.egg-info/top_level.txt

@@ -1,0 +1,26 @@
+version: '3.7'
+services: 
+    app:
+        build: .
+        volumes:
+            - .:/namasha_docker
+        image: app:namasha_docker
+        ports:
+            - 8005:8000
+        depends_on: 
+            - db
+    db:
+        image: postgres
+        volumes: 
+            - ./data/db:/var/lib/postgresql/data
+        
+        environment:
+            - POSTGRES_DB:namasha_docker
+            - POSTGRES_USER:postgres
+            - POSTGRES_PASSWORD:2420559886
+        expose: 
+            - 5435
+        ports: 
+            - 5435:5432
+        
+        container_name: namasha_container
