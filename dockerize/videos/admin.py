@@ -10,6 +10,7 @@ class CategoryAdmin(admin.ModelAdmin):
 class ChannelAdmin(admin.ModelAdmin):
     list_display = ['title', 'link']
     search_fields = ['link']
+    list_filter = ['last_crawl']
 
 
 class Channel_VideoAdmin(admin.ModelAdmin):

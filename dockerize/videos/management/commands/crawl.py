@@ -11,7 +11,9 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         catgories = ['sport', 'funny', 'animation', 'technology', 'vehicle',
-                     'educational', 'music', 'news', '	animals', 'game', 'accidents', 'religious']
+                     'educational', 'music', 'news', '	animals', 'game', 'accidents', 'religious']# add متفرقه و تیزر تبلیغاتی to category
+
+        
         for i, cat in enumerate(catgories):
                 
             category = cat
@@ -20,7 +22,7 @@ class Command(BaseCommand):
                 last_id = None
                 page = 1
                 while NextPage:
-                    print(f'<---- page {page} is crawled!!! ----> ')
+                    print(f'<----{category} page {page} is crawled!!! ----> ')
                     category_db = Category.objects.get(name=category)
                     if not last_id:
                         response = requests.get(
